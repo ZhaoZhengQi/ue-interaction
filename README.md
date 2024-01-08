@@ -5,26 +5,26 @@
 通过npm安装: 
 
 ```bash 
-npm install npm i ue-interaction
+npm install ue-interaction
 ```
 
 ## 使用
 
 ```js
-import Vue from 'vue'
-import  ueSetup  from 'ue-interacion'
+import { ueSend, ueReceive } from 'ue-interacion'
 ```
 
 ## 发送事件给ue
   
   ```js 
-  ue4('eventName', data)
+  ueSend('eventName', data)
   ```
 
 ## 接收ue事件
 
   ```js 
-  window.ue.interface.eventName => function(data) {
+  ueReceive('eventName',()=>{
     // do something......
-  }
+  })
   ```
+
