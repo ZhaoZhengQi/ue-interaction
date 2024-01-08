@@ -25,6 +25,6 @@ import  ueSetup  from 'ue-interacion'
 
   ```js 
   window.ue.interface.eventName => function(data) {
-    // do something...
+    // do something......
   }
   ```
