@@ -7,7 +7,7 @@ function uuidv4() {
   });
 }
 
-export default (function ueSetup() {
+(function ueSetup() {
   window.ue4 = (function (r) {
     "object" != typeof window.ue && (window.ue = {});
     return "object" != typeof ue.interface ||
