@@ -1,0 +1,19 @@
+{
+  "name": "ue-interaction",
+  "version": "1.0.1",
+  "description": "用于ue交互通讯",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhao-seriously/zzq-ue-interaction.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhao-seriously/zzq-ue-interaction/issues"
+  },
+  "homepage": "https://github.com/zhao-seriously/zzq-ue-interaction#readme"
+}
