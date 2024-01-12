@@ -1,6 +1,6 @@
 {
   "name": "ue-interaction",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "用于ue交互通讯",
   "main": "index.js",
   "scripts": {
