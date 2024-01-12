@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 // Copyright Epic Games, Inc. All Rights Reserved.
-import videoImg from "@/assets/images/ueImg/video-play.png";
+import videoImg from "../assets/image/play-icon.png";
 // Window events for a gamepad connecting
 import { webRtcPlayer } from "./webRtcPlayer";
 // import { echo } from "../../echoLog";
