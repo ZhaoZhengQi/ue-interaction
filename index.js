@@ -1,11 +1,6 @@
 import "./src/ue-engine/index.js";
 
-import {
-  pcSend,
-  pcRegister,
-  psSend,
-  psRegister,
-} from "./src/UE/hooks/index.js";
+import { pcSend, pcRegister, psSend, psRegister } from "./src/hooks/index.js";
 
 // 当前的ue环境
 let UE_ENV = "pixel_stream"; // 像素流环境：pixel_stream ，ue引擎环境：ue_engine
