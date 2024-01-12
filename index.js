@@ -50,4 +50,21 @@ export const ueRegister = (name, callback, option) => {
   }
 };
 
-export { pcSend, pcRegister, psSend, psRegister };
+import {
+  app_load,
+  api_close,
+  api_disconnect,
+} from "./src/pixel-stream/index.js";
+
+const psLoad = app_load;
+const psClose = api_close;
+const psDisconnect = api_disconnect;
+export {
+  pcSend,
+  pcRegister,
+  psSend,
+  psRegister,
+  psLoad,
+  psClose,
+  psDisconnect,
+};
