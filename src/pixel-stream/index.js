@@ -3,7 +3,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 import videoImg from "../assets/image/play-icon.png";
 // Window events for a gamepad connecting
-import { webRtcPlayer } from "./webRtcPlayer";
+import { webRtcPlayer } from "./webRtcPlayer.js";
 // import { echo } from "../../echoLog";
 // import { showToast } from "vant";
 
