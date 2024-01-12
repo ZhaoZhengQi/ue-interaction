@@ -18,7 +18,7 @@ window.ue.interface.setUE_ENV = function () {
  * @param {*} option 选项 isJson:是否转换为json并且data不是json，isLog:是否打印日志 h5端永远是json所以无法配置isJson
  * @returns
  */
-export const ueSend = (name, data, option) => {
+const ueSend = (name, data, option) => {
   // ue引擎环境
   if (UE_ENV === "ue_engine") {
     return pcSend(name, data, option);
@@ -35,7 +35,7 @@ export const ueSend = (name, data, option) => {
  * @param {*} option  选项 isLog:是否打印日志
  * @returns
  */
-export const ueRegister = (name, callback, option) => {
+const ueRegister = (name, callback, option) => {
   // ue引擎环境
   if (UE_ENV === "ue_engine") {
     return pcRegister(name, callback, option);
@@ -62,4 +62,6 @@ export {
   psLoad,
   psClose,
   psDisconnect,
+  ueSend,
+  ueRegister,
 };
