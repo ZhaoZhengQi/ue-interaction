@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 // Copyright Epic Games, Inc. All Rights Reserved.
-import videoImg from "../assets/image/play-icon.png";
+// import videoImg from "../assets/image/play-icon.png";
 // Window events for a gamepad connecting
 import { webRtcPlayer } from "./webRtcPlayer.js";
 // import { echo } from "../../echoLog";
@@ -302,7 +302,7 @@ function playVideoStream() {
 function showPlayOverlay() {
   let img = document.createElement("img");
   img.id = "playButton";
-  img.src = videoImg;
+  img.src = "../assets/image/play-icon.png";
   img.style.position = "abs";
   img.style.width = "60px";
   img.style.height = "60px";
