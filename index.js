@@ -76,6 +76,7 @@ import {
 const psLoad = app_load;
 const psClose = api_close;
 const psDisconnect = api_disconnect;
+const apiUnregister = api_unregister;
 export {
   pcSend,
   pcRegister,
