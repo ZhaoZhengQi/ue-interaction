@@ -1,6 +1,6 @@
 import "./src/ue-engine/index.js";
+import icon from "./src/assets/image/play-icon.png";
 import { pcSend, pcRegister, psSend, psRegister } from "./src/hooks/index.js";
-
 // 更新ue环境的回调函数
 let setEnvCallback = null;
 // 当前的ue环境
@@ -70,6 +70,7 @@ import {
   app_load,
   api_close,
   api_disconnect,
+  api_unregister,
 } from "./src/pixel-stream/index.js";
 
 const psLoad = app_load;
@@ -87,4 +88,5 @@ export {
   ueRegister,
   onSetEnv,
   pcSetEnv,
+  apiUnregister,
 };

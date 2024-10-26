@@ -4,7 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import externals from "rollup-plugin-node-externals";
 import json from "@rollup/plugin-json";
 import terser from "@rollup/plugin-terser";
-
+import url from "@rollup/plugin-url";
 export default defineConfig([
   {
     input: {
@@ -25,6 +25,12 @@ export default defineConfig([
       json(),
       commonjs(),
       terser(),
+      url({
+        // 将文件大小小于10KB的图片文件转换为 base64 格式嵌入
+        limit: 10 * 1024,
+        // 图片文件的输出目录
+        fileName: "assets/[name][extname]",
+      }),
     ],
   },
 ]);

@@ -2047,7 +2047,7 @@ export function api_Default_Send(proto, data, callback) {
   responseEventListeners.set(proto, callback);
   //
   emitUIInteraction(jsonData);
-  console.log(JSON.stringify(jsonData));
+  // console.log(JSON.stringify(jsonData));
 }
 
 export function api_setRes_send(width, height) {
