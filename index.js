@@ -1,5 +1,4 @@
 import "./src/ue-engine/index.js";
-import icon from "./src/assets/image/play-icon.png";
 import { pcSend, pcRegister, psSend, psRegister } from "./src/hooks/index.js";
 // 更新ue环境的回调函数
 let setEnvCallback = null;
@@ -11,14 +10,15 @@ let UE_ENV = "ue_engine"; // 像素流环境：pixel_stream ，ue引擎环境：
 // 前端设置当前环境
 const pcSetEnv = (data) => {
   UE_ENV = data;
+  setEnvCallback(UE_ENV);
   console.log("前端更改了当前交互环境", data);
 };
 
 // ue设置当前的ue环境
-pcRegister("setUE_ENV", (data) => {
-  UE_ENV = data;
-  setEnvCallback && setEnvCallback(UE_ENV);
-});
+// pcRegister("setUE_ENV", (data) => {
+//   UE_ENV = data;
+//   setEnvCallback && setEnvCallback(UE_ENV);
+// });
 
 // 像素流设置当前的ue环境
 // psRegister("setUE_ENV", () => {
@@ -73,11 +73,16 @@ import {
   api_unregister,
 } from "./src/pixel-stream/index.js";
 
-const psLoad = app_load;
+// ue像素流加载后默认更改状态为像素流模式
+const psLoad = function () {
+  pcSetEnv("pixel_stream");
+  app_load(...arguments);
+};
 const psClose = api_close;
 const psDisconnect = api_disconnect;
-const apiUnregister = api_unregister;
+const psUnregister = api_unregister;
 export {
+  UE_ENV,
   pcSend,
   pcRegister,
   psSend,
@@ -85,9 +90,9 @@ export {
   psLoad,
   psClose,
   psDisconnect,
+  psUnregister,
   ueSend,
   ueRegister,
   onSetEnv,
   pcSetEnv,
-  apiUnregister,
 };
