@@ -1,6 +1,6 @@
 {
   "name": "zzq-ue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "网页-ue/像素流-H5交互封装",
   "main": "dist/index.js",
   "type": "module",
