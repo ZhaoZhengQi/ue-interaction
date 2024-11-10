@@ -5,7 +5,7 @@ import { api_send, api_register } from "../pixel-stream/index.js";
  * @param {object} data 事件数据
  * @param {object} options 选项
  */
-const pcSend = (eventName, data, options = { isJson: true, isLog: false }) => {
+const pcSend = (eventName, data, options = { isJson: false, isLog: false }) => {
   // 是否转换为json并且data不是json
   if (options.isJson && typeof data === "object") {
     data = JSON.stringify(data);

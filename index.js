@@ -8,7 +8,7 @@ let UE_ENV = "ue_engine"; // 像素流环境：pixel_stream ，ue引擎环境：
 // window.UE_ENV = "pixel_stream";
 
 // 前端设置当前环境
-const pcSetEnv = (data) => {
+const setEnv = (data) => {
   UE_ENV = data;
   setEnvCallback(UE_ENV);
   console.log("前端更改了当前交互环境", data);
@@ -75,7 +75,7 @@ import {
 
 // ue像素流加载后默认更改状态为像素流模式
 const psLoad = function () {
-  pcSetEnv("pixel_stream");
+  setEnv("pixel_stream");
   app_load(...arguments);
 };
 const psClose = api_close;
@@ -94,5 +94,5 @@ export {
   ueSend,
   ueRegister,
   onSetEnv,
-  pcSetEnv,
+  setEnv,
 };
