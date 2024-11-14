@@ -1,5 +1,5 @@
 # zzq-ue
-![Npm 版本](https://img.shields.io/badge/zzq-ue_v0.0.7-blue)
+![Npm 版本](https://img.shields.io/badge/zzq-ue_v0.0.8-blue)
 ## 📖 简介
 用于前端项目与ue项目交互（包括ue引擎嵌套前端项目，或前端嵌套ue像素流两种方式）
 
@@ -42,6 +42,13 @@ console.log(UE_ENV) // 'ue_engine' | 'pixel_stream'
 ```
 ue_engine：ue嵌套前端环境
 pixel_stream：前端嵌套ue像素流环境
+
+
+注意：
+在使用方式一时，UE_ENV的状态很重要，内不会根据这个变量判断发送和接受事件的方式。
+
+
+因为可能会有切换显示方式的场景，可以考虑暴露给ue一个更改当前变量的Api，让ue切换显示方式时来调用，在该变量发生变化时会执行下面的函数。
 
 ##### 环境发生变化时的回调函数
 ```js
