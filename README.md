@@ -1,5 +1,5 @@
 # zzq-ue
-![Npm 版本](https://img.shields.io/badge/zzq-ue_v0.0.8-blue)
+![Npm 版本](https://img.shields.io/badge/zzq-ue_v0.1.0-blue)
 ## 📖 简介
 用于前端项目与ue项目交互（包括ue引擎嵌套前端项目，或前端嵌套ue像素流两种方式）
 
