@@ -10,14 +10,36 @@ npm install zzq-ue
 
 ## 📚 使用
 支持ue客户端嵌套前端项目、前端嵌套ue像素流是两种不同的接入方式
+### 前端嵌入像素流
+需要在模版中定义一个id为player的元素用来接受展示像素流的内容
+
+参数：
+  - location: 像素流的ws地址
+  - callback: 像素流加载完成后的回调函数
+
+```html
+<!-- 必须容器 -->
+<div id="player"></div>
+
+<script setup>
+import { psLoad } from 'zzq-ue'
+
+psLoad(location, callback) 
+
+// 初始化像素流
+psLoad('wss://your-streaming-server', () => {
+  console.log('Pixel Streaming 初始化完成')
+})
+</script>
+```
 ### 三种不同的交互方式
 #### 方式一（通用模式）
 会根据当前设置的环境自动判断发送和接受事件的方式，适合项目中会切换显示方式的场景
 ##### 发送事件给ue
 ```js
-import { pcSend } from 'zzq-ue'
+import { ueSend } from 'zzq-ue'
 
-pcSend(eventName, params, option = { isLog: false, isJson: false })
+ueSend(eventName, params, option = { isLog: false, isJson: false })
 ```
 参数：
   - eventName: 事件名称
