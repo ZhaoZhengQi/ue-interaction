@@ -52,6 +52,10 @@ ueSend(eventName, params, option = { isLog: false, isJson: false })
 import { ueRegister } from 'zzq-ue'
 
 ueRegister(eventName, callback)
+// 注意：ue传递给前端的事件参数格式为{
+//   eventName: '事件名称',
+//   eventParam: '参数'
+// }
 ```
 参数：
   - eventName: 事件名称

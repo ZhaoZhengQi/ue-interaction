@@ -6,7 +6,9 @@ import videoImg from "../assets/image/play-icon.png";
 import { webRtcPlayer } from "./webRtcPlayer.js";
 // import { echo } from "../../echoLog";
 // import { showToast } from "vant";
-
+let configObj = {
+  cursorStyle: "none",
+};
 let haveWebkitEvents = "WebKitGamepadEvent" in window;
 let controllers = {};
 let rAF =
@@ -1618,7 +1620,7 @@ function registerLockedMouseEvents(playerElement) {
 function registerHoveringMouseEvents(playerElement) {
   console.log("%c当前开启HoveringMouse", "color: tomato");
   // echo.log(echo.asWarning('提醒'), '当前开启HoveringMouse')
-  styleCursor = "none"; // We will rely on UE4 client's software cursor.
+  styleCursor = configObj?.cursorStyle ?? "none"; // We will rely on UE4 client's software cursor.
   //styleCursor = 'default';  // Showing cursor
 
   playerElement.onmousemove = function (e) {
@@ -2004,8 +2006,10 @@ export function playBtn() {
 
 let bFreeControl = true;
 let signalServer = "localhost:80";
-export function app_load(signalServerAddr, onFinish) {
+export function app_load(signalServerAddr, onFinish, options = {}) {
   console.log("ws to signal server: ", signalServerAddr);
+  // configObj合并options
+  configObj = Object.assign(configObj, options);
   signalServer = signalServerAddr;
   onDataChannelConnected = onFinish;
   window.addEventListener("resize", resizePlayerStyle, true);
