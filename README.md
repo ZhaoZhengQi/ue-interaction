@@ -1,5 +1,5 @@
 # zzq-ue
-![Npm 版本](https://img.shields.io/badge/zzq-ue_v0.0.13-blue)
+![Npm 版本](https://img.shields.io/badge/zzq-ue_v0.0.15-blue)
 ## 📖 简介
 用于前端项目与ue项目交互（包括ue引擎嵌套前端项目，或前端嵌套ue像素流两种方式）
 
@@ -47,6 +47,7 @@ ueSend(eventName, params, option = { isLog: false, isJson: false })
   - option: 配置项
     - isLog: 是否打印日志-默认false
     - isJson: 参数是否为json格式-默认false
+
 ##### 注册ue发送过来的事件
 ```js
 import { ueRegister } from 'zzq-ue'
